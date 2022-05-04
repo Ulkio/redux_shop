@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 1em;
 }
+
 .card {
   background-color: white;
   width: 25%;
@@ -15,6 +16,7 @@
   border-radius: 10px;
   padding: 10px 50px;
 }
+
 .cardTitle {
   font-weight: bold;
   text-overflow: ellipsis;
@@ -22,17 +24,27 @@
   width: 200px;
   white-space: nowrap;
 }
+
+.actions {
+  display: flex;
+  gap: 1em;
+}
 .addButton {
   cursor: pointer;
 }
+.removeButton {
+  cursor: pointer;
+}
+
 .paginationContainer {
   padding: 10px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
+
 .pagination {
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;

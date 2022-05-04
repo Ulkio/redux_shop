@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemToCart } from "../../redux/cart/action";
+import { addItemToCart, removeItemFromCart } from "../../redux/cart/action";
 import { loadItems } from "../../redux/items/action";
 import Card from "../../components/Card";
 import style from "./Home.module.css";
@@ -17,6 +17,9 @@ function Home() {
 
   const handlePlusButton = (item) => {
     dispatch(addItemToCart(item));
+  };
+  const handleRemoveButton = (item) => {
+    dispatch(removeItemFromCart(item));
   };
 
   const nextPage = () => {
@@ -57,14 +60,24 @@ function Home() {
             item.id < pagination + 10 && (
               <div key={item.id} className={style.card}>
                 <Card cartItem={item} />
-                <img
-                  className={style.addButton}
-                  onClick={() => {
-                    handlePlusButton(item);
-                  }}
-                  src="/assets/img/plus-circle.svg"
-                  alt="addtocart"
-                />
+                <div className={style.actions}>
+                  <img
+                    className={style.addButton}
+                    onClick={() => {
+                      handlePlusButton(item);
+                    }}
+                    src="/assets/img/plus-circle.svg"
+                    alt="addtocart"
+                  />
+                  <img
+                    className={style.removeButton}
+                    onClick={() => {
+                      handleRemoveButton(item);
+                    }}
+                    src="/assets/img/x-circle.svg"
+                    alt="addtocart"
+                  />
+                </div>
               </div>
             )
           );
