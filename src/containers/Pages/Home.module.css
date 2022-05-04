@@ -1,0 +1,39 @@
+.section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.card {
+  background-color: white;
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 50px;
+}
+.cardTitle {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+}
+.addButton {
+  cursor: pointer;
+}
+.paginationContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

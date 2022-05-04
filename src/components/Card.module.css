@@ -1,0 +1,11 @@
+.cardTitle {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+}
+
+.quantity {
+  font-weight: bold;
+}
